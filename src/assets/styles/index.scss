@@ -1,0 +1,10 @@
+@import "./variables";
+@import "./general";
+
+body{
+    font-family: getFonts("lora");
+
+    header{
+        height: getMeasurement("headerHeight");
+    }
+}
