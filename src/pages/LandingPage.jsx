@@ -5,6 +5,10 @@ import "../assets/styles/landingpage.css"
 
 import BannerImageOne from "../assets/images/banner_image_origin.png"
 import BannerImageTwo from "../assets/images/banner_image.png"
+import BenefitImageOne from "../assets/images/benefit_image_one.png"
+import BenefitImageTwo from "../assets/images/benefit_image_two.png"
+import BenefitImageThree from "../assets/images/benefit_image_three.png"
+import { Link } from 'react-router-dom'
 export default function LandingPage() {
   return (
     <>
@@ -72,9 +76,95 @@ export default function LandingPage() {
         </div>
 
         <div className='why'>
-            <h2 className="title">Why Hydro</h2>
+            <h2 className="title">Why Peach</h2>
 
             <p className='description'>Hydro is a gentle skin care brand that has been recommended ans trusted by doctors and dermatologists for over 70 years and it's used by millions with sensitive skin around the world to improve the resilience of their skin</p>
+        </div>
+
+        <div className="benefits">
+            <h2 className="title">Benefits of Peach</h2>
+
+            <div className="benefit-contents flex-container space-between align-start">
+
+                <div className="benefit-image half-width">
+
+                    <img src={BenefitImageOne} alt="benefit" />
+
+                </div>
+
+                <div className="benefit-text half-width">
+
+                    <h3 className='benefit-text-title'>Combats dryness</h3>
+
+                    <p className="description">Dry skin arises as a result of weakened skin barrier which makes it hard for the skin to retain moisture</p>
+
+                    <p className="description">Peach product contain the nourishing ingredients which strengthens the barrier to retain moisture without causing irritation</p>
+
+                    <div className='benefit-action'>
+
+                        <Link className="button" to="/">Products for dry skin</Link>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div className="benefit-contents flex-container space-between align-start rearranged">
+
+                <div className="benefit-image half-width">
+
+                    <img src={BenefitImageTwo} alt="benefit" />
+
+                </div>
+
+                <div className="benefit-text half-width">
+
+                    <h3 className='benefit-text-title'>Soothes Irritation</h3>
+
+                    <p className="description">Sensitive skin types are highly prone to irritation from weather or skincare products containing harsh ingredients. The result is either redness, itching, burning or stinging</p>
+
+                    <p className="description">Peach product contain gentle soothing ingredients recommended by dermatologists for the skin</p>
+
+                    <div className='benefit-action'>
+
+                        <Link className="button" to="/">Products for irritated skin</Link>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div className="benefit-contents flex-container space-between align-start">
+
+                <div className="benefit-image half-width">
+
+                    <img src={BenefitImageThree} alt="benefit" />
+
+                </div>
+
+                <div className="benefit-text half-width">
+
+                    <h3 className='benefit-text-title'>Fights roughness</h3>
+
+                    <p className="description">Roughness of the skin may occur due to disruption in the human's body natural skin shedding process. This may appear in the form of rough, uneven or flaky skin</p>
+
+                    <p className="description">Peach products contain gentle exfoliation mechanism that strengthens the natural skin barrier and allowing the outer layer to be renewed, resulting in smooth, supple skin.</p>
+
+                    <div className='benefit-action'>
+
+                        <Link className="button" to="/">Products for rough skin</Link>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
         </div>
     
     </>

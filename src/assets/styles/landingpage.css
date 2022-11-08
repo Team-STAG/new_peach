@@ -224,6 +224,7 @@ button {
 .why {
   padding: 100px 8%;
   background: #B6B6B6;
+  padding-bottom: 60px;
 }
 .why .title {
   font-size: 1.8rem;
@@ -234,4 +235,50 @@ button {
   margin-top: 30px;
   font-size: 1.3rem;
   text-align: center;
+}
+
+.benefits {
+  padding: 100px 8%;
+  background: #B6B6B6;
+  padding-top: 0px;
+}
+.benefits .title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.benefits .benefit-contents {
+  width: 100%;
+  margin-top: 60px;
+}
+.benefits .benefit-contents .benefit-image {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  overflow: hidden;
+}
+.benefits .benefit-contents .benefit-image img {
+  width: 100%;
+}
+.benefits .benefit-contents .benefit-text h3 {
+  font-size: 1.7rem;
+}
+.benefits .benefit-contents .benefit-text .description {
+  margin-top: 20px;
+  font-size: 1.4rem;
+}
+.benefits .benefit-contents .benefit-text .benefit-action {
+  margin-top: 20px;
+}
+.benefits .benefit-contents .benefit-text .benefit-action .button {
+  background: #D56E46;
+  color: white;
+}
+.benefits .rearranged .benefit-image {
+  order: 2;
+}
+.benefits .rearranged .benefit-text {
+  order: 1;
 }/*# sourceMappingURL=landingpage.css.map */
