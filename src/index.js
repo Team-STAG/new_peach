@@ -1,13 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import Error404 from "./pages/Error404";
 import "./assets/styles/index.css";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <Error404 />,
+    children: [
+
+      {
+        index: true,
+        element: <LandingPage />
+      },
+      {
+        path: "home",
+        element: <LandingPage />
+    
+      }
+    ]
+  },
+]);
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+
+    <RouterProvider router={router} />
+
   </React.StrictMode>
 );
 

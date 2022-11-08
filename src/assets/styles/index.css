@@ -1,3 +1,23 @@
+@font-face {
+  font-family: lora;
+  src: url("../fonts/Lora-Regular.ttf");
+}
+@font-face {
+  font-family: pacifico;
+  src: url("../fonts/Pacifico-Regular.ttf");
+}
+@font-face {
+  font-family: dancingScript;
+  src: url("../fonts/DancingScript-Regular.ttf");
+}
+@font-face {
+  font-family: dancingScriptSemiBold;
+  src: url("../fonts/DancingScript-SemiBold.ttf");
+}
+@font-face {
+  font-family: dancingScriptBold;
+  src: url("../fonts/DancingScript-Bold.ttf");
+}
 * {
   padding: 0px;
   margin: 0px;
@@ -60,6 +80,14 @@ a {
   text-decoration: none;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.list-none {
+  list-style: none;
+}
+
 button {
   padding: 10px 20px;
   outline: none;
@@ -71,8 +99,97 @@ button {
 }
 
 body {
-  font-family: url("../fonts/Lora-Regular.ttf");
+  font-family: lora;
+  width: 100%;
+  position: relative;
 }
-body header {
+body .body-container {
+  width: 100%;
+  max-width: 1600px;
+  position: relative;
+  margin-inline: auto;
+  font-size: 1.2rem;
+}
+body .body-container header {
   height: getMeasurement("headerHeight");
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  max-width: 1600px;
+  padding: 10px 8%;
+  z-index: 99;
+}
+body .body-container header .logo a {
+  font-family: pacifico;
+  font-size: 1.5rem;
+  color: #D56E46;
+}
+body .body-container header .links ul {
+  list-style: none;
+}
+body .body-container header .links ul li a {
+  font-size: 1.2rem;
+}
+body .body-container header .links ul li:not(:first-child) {
+  margin-left: 70px;
+}
+body .body-container .page-container {
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+}
+body .body-container footer {
+  background: #A9A9A9;
+  padding: 80px 8%;
+  width: 100%;
+  height: auto;
+  padding-bottom: 30px;
+}
+body .body-container footer .footer-container .title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+body .body-container footer .footer-container .footer-links li a {
+  color: black;
+}
+body .body-container footer .footer-container .footer-links li:not(:last-child) {
+  margin-bottom: 15px;
+}
+body .body-container footer .footer-container p {
+  font-size: 1.2rem;
+}
+body .body-container footer .footer-container p:not(:last-child) {
+  margin-bottom: 15px;
+}
+body .body-container footer .footer-container .content-one {
+  width: 22%;
+}
+body .body-container footer .footer-container .content-one .logo a {
+  font-size: 3rem;
+  font-family: pacifico;
+  color: #D56E46;
+}
+body .body-container footer .footer-container .content-one .social-container li a {
+  font-size: 2.5rem;
+  color: black;
+}
+body .body-container footer .footer-container .content-one .social-container li:not(:last-child) {
+  margin-right: 10px;
+}
+body .body-container footer .footer-container .content-two {
+  width: 16%;
+}
+body .body-container footer .footer-container .bold:not(:last-child) {
+  margin-bottom: 15px;
+}
+body .body-container footer .footer-container:not(:first-child) {
+  margin-top: 40px;
 }/*# sourceMappingURL=index.css.map */

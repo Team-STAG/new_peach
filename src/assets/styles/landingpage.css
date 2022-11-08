@@ -1,3 +1,23 @@
+@font-face {
+  font-family: lora;
+  src: url("../fonts/Lora-Regular.ttf");
+}
+@font-face {
+  font-family: pacifico;
+  src: url("../fonts/Pacifico-Regular.ttf");
+}
+@font-face {
+  font-family: dancingScript;
+  src: url("../fonts/DancingScript-Regular.ttf");
+}
+@font-face {
+  font-family: dancingScriptSemiBold;
+  src: url("../fonts/DancingScript-SemiBold.ttf");
+}
+@font-face {
+  font-family: dancingScriptBold;
+  src: url("../fonts/DancingScript-Bold.ttf");
+}
 * {
   padding: 0px;
   margin: 0px;
@@ -58,6 +78,14 @@ html {
 
 a {
   text-decoration: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.list-none {
+  list-style: none;
 }
 
 button {

@@ -1,20 +1,10 @@
 import React from "react"
+import { Outlet } from "react-router-dom";
+
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-} from "react-router-dom";
-import LandingPage from "./pages/LandingPage";
 
-
-  const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <LandingPage />,
-  },
-]);
+  
 
 function App() {
 
@@ -22,11 +12,20 @@ function App() {
   return (
     <>
 
-      <Header />
-    
-      <RouterProvider router={router} />
+      <div className="body-container">
 
-      <Footer />
+        <Header />
+
+          <div className="page-container">
+
+            <Outlet />
+
+          </div>
+
+        <Footer />
+        
+      </div>
+
 
     </>
   );
