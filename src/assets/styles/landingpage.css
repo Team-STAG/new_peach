@@ -219,4 +219,19 @@ button {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+}
+
+.why {
+  padding: 100px 8%;
+  background: #B6B6B6;
+}
+.why .title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.why .description {
+  margin-top: 30px;
+  font-size: 1.3rem;
+  text-align: center;
 }/*# sourceMappingURL=landingpage.css.map */

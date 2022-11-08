@@ -70,6 +70,12 @@ export default function LandingPage() {
             </div>
 
         </div>
+
+        <div className='why'>
+            <h2 className="title">Why Hydro</h2>
+
+            <p className='description'>Hydro is a gentle skin care brand that has been recommended ans trusted by doctors and dermatologists for over 70 years and it's used by millions with sensitive skin around the world to improve the resilience of their skin</p>
+        </div>
     
     </>
   )

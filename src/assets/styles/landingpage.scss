@@ -95,7 +95,7 @@
         height: auto;
 
         .title{
-            font-size: 1.8rem;
+            font-size: getMeasurements("headerFontSize");
         }
 
         .content-description{
@@ -132,5 +132,23 @@
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
+    }
+}
+
+.why{
+    
+    padding: getMeasurements("negativeSpace") getMeasurements("defaultPadding");
+    background: getColors("sectionColorTwo");
+
+    .title{
+        font-size: getMeasurements("headerFontSize");
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .description{
+        margin-top: 30px;
+        font-size: 1.3rem;
+        text-align: center;
     }
 }
