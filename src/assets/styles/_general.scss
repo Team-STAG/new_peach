@@ -79,3 +79,16 @@ button{
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
+
+.button{
+    display: inline-flex;
+    padding: 10px 20px;
+    outline: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}

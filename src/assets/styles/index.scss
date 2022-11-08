@@ -15,9 +15,10 @@ body{
         font-size: 1.2rem;
 
         header{
-            height: getMeasurement("headerHeight");
+            height: getMeasurements("headerHeight");
             width: 100%;
             position: fixed;
+            background: #868686;
             top: 0px;
             left: 50%;
             transform: translateX(-50%);
@@ -47,6 +48,7 @@ body{
                         
                         a{
                             font-size: 1.2rem;
+                            color: getColors("textColorOne");
                         }
 
                         &:not(:first-child){

@@ -98,6 +98,19 @@ button {
   -o-border-radius: 5px;
 }
 
+.button {
+  display: inline-flex;
+  padding: 10px 20px;
+  outline: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   font-family: lora;
   width: 100%;
@@ -111,9 +124,10 @@ body .body-container {
   font-size: 1.2rem;
 }
 body .body-container header {
-  height: getMeasurement("headerHeight");
+  height: 80px;
   width: 100%;
   position: fixed;
+  background: #868686;
   top: 0px;
   left: 50%;
   transform: translateX(-50%);
@@ -135,6 +149,7 @@ body .body-container header .links ul {
 }
 body .body-container header .links ul li a {
   font-size: 1.2rem;
+  color: black;
 }
 body .body-container header .links ul li:not(:first-child) {
   margin-left: 70px;
