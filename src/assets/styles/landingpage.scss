@@ -217,3 +217,42 @@
         }
     }
 }
+
+.discover{
+    padding: getMeasurements("negativeSpace") getMeasurements("defaultPadding");
+
+    .title{
+        font-size: getMeasurements("headerFontSize");
+        text-transform: uppercase;
+        text-align: center;
+
+    }
+
+    .subtitle{
+        text-align: center;
+        font-size: 1.4rem;
+        margin-top: 15px;
+    }
+
+    .discover-content{
+        margin-top: 40px;
+
+        .discover-card{
+            width: 22%;
+
+            img{
+                width: 100%;
+                height: auto;
+            }
+
+            .name{
+                text-align: center;
+                font-size: 1.7rem;
+                margin-top: 15px;
+            }
+        }
+    }
+
+
+
+}

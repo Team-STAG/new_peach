@@ -281,4 +281,33 @@ button {
 }
 .benefits .rearranged .benefit-text {
   order: 1;
+}
+
+.discover {
+  padding: 100px 8%;
+}
+.discover .title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+.discover .subtitle {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 15px;
+}
+.discover .discover-content {
+  margin-top: 40px;
+}
+.discover .discover-content .discover-card {
+  width: 22%;
+}
+.discover .discover-content .discover-card img {
+  width: 100%;
+  height: auto;
+}
+.discover .discover-content .discover-card .name {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-top: 15px;
 }/*# sourceMappingURL=landingpage.css.map */

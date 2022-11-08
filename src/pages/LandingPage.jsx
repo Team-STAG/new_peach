@@ -8,6 +8,10 @@ import BannerImageTwo from "../assets/images/banner_image.png"
 import BenefitImageOne from "../assets/images/benefit_image_one.png"
 import BenefitImageTwo from "../assets/images/benefit_image_two.png"
 import BenefitImageThree from "../assets/images/benefit_image_three.png"
+import DiscoverImageOne from "../assets/images/discover_image_one.png"
+import DiscoverImageTwo from "../assets/images/discover_image_two.png"
+import DiscoverImageThree from "../assets/images/discover_image_three.png"
+import DiscoverImageFour from "../assets/images/discover_image_four.png"
 import { Link } from 'react-router-dom'
 export default function LandingPage() {
   return (
@@ -165,6 +169,36 @@ export default function LandingPage() {
 
             </div>
 
+        </div>
+
+        <div className="discover">
+            <h2 className='title'>Discover more from peach</h2>
+
+            <p className='subtitle'>Get the best care for your sensitive skin across all our product ranges</p>
+
+            <div className="discover-content flex-container space-between align-start">
+
+                <div className='discover-card'>
+                    <img src={DiscoverImageOne} alt="" />
+                    <p className='name'>Face</p>
+                </div>
+
+                <div className='discover-card'>
+                    <img src={DiscoverImageTwo} alt="" />
+                    <p className='name'>Body</p>
+                </div>
+
+                <div className='discover-card'>
+                    <img src={DiscoverImageThree} alt="" />
+                    <p className='name'>Hands</p>
+                </div>
+
+                <div className='discover-card'>
+                    <img src={DiscoverImageFour} alt="" />
+                    <p className='name'>Legs</p>
+                </div>
+
+            </div>
         </div>
     
     </>
