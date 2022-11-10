@@ -27,7 +27,7 @@ import { Button } from "antd";
 export default function LandingPage() {
 
     var settings = {
-      dots: true,
+      dots: false,
       infinite: false,
       speed: 500,
       slidesToShow: 4,
@@ -263,7 +263,7 @@ export default function LandingPage() {
             <div className="best-seller-header">
 
                 <h2 className="title">Best Seller</h2>
-                
+
                 <div className="slide-next-prev-action-button">
                     <Button className="slide-btn prevButton" onClick={prevSlide}><FaAngleLeft /></Button>
                     <Button className="slide-btn nextButton" onClick={nextSlide}><FaAngleRight /></Button>
@@ -626,6 +626,7 @@ export default function LandingPage() {
         </div>
 
         <div className="tips">
+
             <h2 className="title">Want to receive best tips on perfumes?</h2>
 
             <div className="tips-images-container flex-container align-start space-between">
@@ -646,6 +647,12 @@ export default function LandingPage() {
                     <img src={TipsImageFour} alt="tips" />
                 </div>
 
+
+            </div>
+
+            <div className="tips-action flex-container align-center justify-center">
+
+                <a className="button" href="https://instagram.com/" rel="norefopener">Visit Instagram Page</a>
 
             </div>
             
