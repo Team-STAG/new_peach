@@ -8,7 +8,6 @@ import "slick-carousel/slick/slick-theme.css";
 import {FaAngleLeft, FaAngleRight, FaStar, FaStarHalf} from "react-icons/fa"
 
 
-import BannerImageOne from "../assets/images/banner_image_origin.png"
 import BannerImageTwo from "../assets/images/banner_image.png"
 import BenefitImageOne from "../assets/images/benefit_image_one.png"
 import BenefitImageTwo from "../assets/images/benefit_image_two.png"
