@@ -155,6 +155,9 @@ body .body-container header .links ul li a {
 body .body-container header .links ul li:not(:first-child) {
   margin-left: 70px;
 }
+body .body-container header .mobile-link-btn {
+  display: none;
+}
 body .body-container header .mobile-link-btn button {
   background: transparent;
   color: black;
@@ -259,6 +262,9 @@ body .body-container footer .footer-container .content-two {
 @media only screen and (max-width: 500px) {
   body .body-container header .desktop-links {
     display: none;
+  }
+  body .body-container header .mobile-link-btn {
+    display: block;
   }
   body .body-container footer .footer-container .content-one,
 body .body-container footer .footer-container .content-two {

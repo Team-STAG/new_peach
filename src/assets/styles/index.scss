@@ -61,6 +61,7 @@ body{
             }
 
             .mobile-link-btn{
+                display: none;
 
                 button{
                     background: transparent;
@@ -239,6 +240,10 @@ body{
 
                 .desktop-links{
                     display: none;
+                }
+
+                .mobile-link-btn{
+                    display: block;
                 }
             }
 
