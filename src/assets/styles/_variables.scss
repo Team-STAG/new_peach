@@ -40,7 +40,7 @@ $measurements: (
     "headerHeight": 80px,
     "defaultPadding": 8%,
     "negativeSpace": 100px,
-    "headerFontSize": 1.8rem
+    "headerFontSize": clamp(1.2rem, 2vw, 1.8rem)
 );
 
 @function getColors($value){

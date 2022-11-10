@@ -1,7 +1,18 @@
-import React from 'react'
+import { Button } from 'antd'
+import React, { useState } from 'react'
+import { FaBars } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import MobileMenu from './MobileMenu'
+import Modal from './Modal'
 
 export default function Header() {
+
+    const [modalOpened, setModalOpened] = useState(false)
+
+    const closeModal = ()=> {
+        setModalOpened(prev => !prev)
+    }
+
   return (
     <>
     
@@ -21,7 +32,21 @@ export default function Header() {
 
             </div>
 
+            <div className="mobile-link-btn">
+
+                <Button onClick={()=>{
+                    closeModal()
+                }}><FaBars /></Button>
+
+            </div>
+
         </header>
+
+        <Modal isOpened={modalOpened}>
+
+            <MobileMenu isOpened={modalOpened} onClosing={closeModal}/>
+
+        </Modal>
 
     </>
   )

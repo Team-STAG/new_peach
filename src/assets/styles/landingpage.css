@@ -116,7 +116,7 @@ button {
   width: 100%;
   height: 100vh;
   padding: 120px 8%;
-  min-height: 735px;
+  min-height: 600px;
   max-height: 735px;
   background: linear-gradient(180.37deg, #989895 6.32%, #868686 17.62%, #7B7B7B 25.73%, #7B7B7B 33.83%, #747474 39.2%, #747775 42.82%, #747775 46.38%, #747775 53.77%, #696B6A 67.25%, #696B6A 69.99%, #696B6A 73.72%, #989895 91.23%);
   position: relative;
@@ -127,13 +127,13 @@ button {
 }
 .banner-container .banner-content .banner-content-header.first-header {
   font-family: dancingScriptBold;
-  font-size: 10rem;
+  font-size: clamp(5rem, 10vw, 10rem);
 }
 .banner-container .banner-content .banner-content-header.second-header {
-  font-size: 3.4rem;
+  font-size: clamp(1.8rem, 5vw, 3rem);
 }
 .banner-container .banner-content .banner-content-subtitle {
-  font-size: 1.8rem;
+  font-size: clamp(1rem, 5vw, 1.8rem);
   margin-top: 20px;
 }
 .banner-container .banner-content .banner-content-action {
@@ -144,6 +144,7 @@ button {
   color: white;
 }
 .banner-container .banner-image {
+  position: relative;
   position: relative;
 }
 .banner-container .banner-image img {
@@ -160,7 +161,7 @@ button {
   -moz-transform: scaleY(-1);
   -ms-transform: scaleY(-1);
   -o-transform: scaleY(-1);
-  top: calc(100% - 20px);
+  bottom: -105%;
   -webkit-filter: unset;
   z-index: 1;
 }
@@ -187,11 +188,12 @@ button {
   height: auto;
 }
 .quality .quality-content .title {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
 }
 .quality .quality-content .content-description {
   margin-top: 20px;
   font-size: 1.3rem;
+  font-size: clamp(0.9rem, 1.4vw, 1.3rem);
 }
 .quality::after {
   content: "";
@@ -228,13 +230,14 @@ button {
   padding-bottom: 60px;
 }
 .why .title {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
   text-transform: uppercase;
   text-align: center;
 }
 .why .description {
   margin-top: 30px;
   font-size: 1.3rem;
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
   text-align: center;
 }
 
@@ -244,7 +247,7 @@ button {
   padding-top: 0px;
 }
 .benefits .title {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
   text-transform: uppercase;
   text-align: center;
 }
@@ -265,10 +268,12 @@ button {
 }
 .benefits .benefit-contents .benefit-text h3 {
   font-size: 1.7rem;
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
 }
 .benefits .benefit-contents .benefit-text .description {
   margin-top: 20px;
   font-size: 1.4rem;
+  font-size: clamp(1rem, 2vw, 1.4rem);
 }
 .benefits .benefit-contents .benefit-text .benefit-action {
   margin-top: 20px;
@@ -288,7 +293,7 @@ button {
   padding: 100px 8%;
 }
 .discover .title {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
   text-transform: uppercase;
   text-align: center;
 }
@@ -316,9 +321,10 @@ button {
 .best-seller {
   padding: 100px 8%;
   position: relative;
+  padding-top: 0px;
 }
 .best-seller .title {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
   text-transform: uppercase;
   text-align: center;
 }
@@ -333,8 +339,8 @@ button {
 }
 .best-seller .best-seller-header .slide-next-prev-action-button button {
   border: 2px solid #D56E46;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   background: transparent;
   padding: 0px;
   border-radius: 50%;
@@ -342,7 +348,10 @@ button {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #D56E46;
 }
 .best-seller .best-seller-header .slide-next-prev-action-button button:not(:first-child) {
@@ -397,9 +406,10 @@ button {
 
 .tips {
   padding: 100px 8%;
+  padding-top: 0px;
 }
 .tips .title {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
   text-transform: uppercase;
   text-align: center;
 }
@@ -427,4 +437,73 @@ button {
   -moz-transition: 0.5s ease all;
   -ms-transition: 0.5s ease all;
   -o-transition: 0.5s ease all;
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-container {
+    justify-content: center !important;
+    min-height: unset;
+    max-height: unset;
+    height: auto;
+  }
+  .banner-container .banner-content {
+    width: 100%;
+    height: auto;
+    align-items: center;
+  }
+  .banner-container .banner-image {
+    width: 100%;
+    align-items: center;
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 684px) {
+  .quality .quality-content {
+    width: 100%;
+    height: auto;
+  }
+  .quality .quality-content .title {
+    font-size: 1.8rem;
+  }
+  .quality .quality-content .content-description {
+    font-size: 1.15rem;
+  }
+  .quality .quality-content:not(:first-child) {
+    margin-top: 20px;
+  }
+  .why .description {
+    font-size: 1.3rem;
+  }
+  .benefits .benefit-contents .benefit-image {
+    width: 100%;
+    order: 2;
+    margin-top: 40px;
+  }
+  .benefits .benefit-contents .benefit-text {
+    width: 100%;
+    order: 1;
+    text-align: center;
+  }
+  .benefits .benefit-contents .benefit-text h3 {
+    font-size: 1.7rem;
+  }
+  .benefits .benefit-contents .benefit-text .description {
+    font-size: 1.4rem;
+  }
+  .discover .discover-content .discover-card {
+    width: 48%;
+    margin-bottom: 25px;
+  }
+  .tips .tips-images-container .tips-images {
+    width: 48%;
+    margin-bottom: 25px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .quality {
+    text-align: center;
+  }
+  .best-seller .best-seller-card .best-seller-card-details {
+    width: 100%;
+  }
 }/*# sourceMappingURL=landingpage.css.map */

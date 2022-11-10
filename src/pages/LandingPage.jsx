@@ -74,7 +74,7 @@ export default function LandingPage() {
   return (
     <>
     
-        <div className='banner-container flex-container space-between align-center'>
+        <div className='banner-container flex-container space-between align-center wrap'>
 
 
             <div className='banner-content flex-container column align-start half-width'>
@@ -94,7 +94,7 @@ export default function LandingPage() {
 
             <div className="banner-image flex-container column align-start half-width">
 
-                <img src={BannerImageOne} alt="perfume-images" />
+                <img src={BannerImageTwo} alt="perfume-images" />
                 <img src={BannerImageTwo} className="second-image" alt="perfume-images" />
                 
             </div>
@@ -145,7 +145,7 @@ export default function LandingPage() {
         <div className="benefits">
             <h2 className="title">Benefits of Peach</h2>
 
-            <div className="benefit-contents flex-container space-between align-start">
+            <div className="benefit-contents flex-container space-between align-start wrap">
 
                 <div className="benefit-image half-width">
 
@@ -172,7 +172,7 @@ export default function LandingPage() {
 
             </div>
 
-            <div className="benefit-contents flex-container space-between align-start rearranged">
+            <div className="benefit-contents flex-container space-between align-start rearranged wrap">
 
                 <div className="benefit-image half-width">
 
@@ -199,7 +199,7 @@ export default function LandingPage() {
 
             </div>
 
-            <div className="benefit-contents flex-container space-between align-start">
+            <div className="benefit-contents flex-container space-between align-start wrap">
 
                 <div className="benefit-image half-width">
 
@@ -233,7 +233,7 @@ export default function LandingPage() {
 
             <p className='subtitle'>Get the best care for your sensitive skin across all our product ranges</p>
 
-            <div className="discover-content flex-container space-between align-start">
+            <div className="discover-content flex-container space-between align-start wrap">
 
                 <div className='discover-card'>
                     <img src={DiscoverImageOne} alt="" />
@@ -629,7 +629,7 @@ export default function LandingPage() {
 
             <h2 className="title">Want to receive best tips on perfumes?</h2>
 
-            <div className="tips-images-container flex-container align-start space-between">
+            <div className="tips-images-container flex-container align-start space-between wrap">
 
                 <div className="tips-images">
                     <img src={TipsImageOne} alt="tips" />

@@ -5,7 +5,7 @@
     width: 100%;
     height: 100vh;
     padding: calc(getMeasurements("headerHeight") + 40px) getMeasurements("defaultPadding");
-    min-height: 735px;
+    min-height: 600px;
     max-height: 735px;
     background: getColors("bannerGradient");
     position: relative;
@@ -14,20 +14,22 @@
 
     .banner-content{
         position: relative;
+
         .banner-content-header{
 
             &.first-header{
                 font-family: dancingScriptBold;
-                font-size: 10rem;
+                font-size: clamp(5rem, 10vw, 10rem); 
             }
 
             &.second-header{
-                font-size: 3.4rem;
+                font-size: clamp(1.8rem, 5vw, 3rem); 
             }
         }
 
         .banner-content-subtitle{
-            font-size: 1.8rem;
+            // font-size: 1.8rem;
+            font-size: clamp(1rem, 5vw, 1.8rem); 
             margin-top: 20px;
         }
         
@@ -43,7 +45,9 @@
 
     .banner-image{
         position: relative;
+        // border: 1px solid red;
         // overflow: hidden;
+        position: relative;
 
         img{
             width: 100%;
@@ -61,7 +65,8 @@
                 -moz-transform: scaleY(-1);
                 -ms-transform: scaleY(-1);
                 -o-transform: scaleY(-1);
-                top: calc(100% - 20px);
+                // top: calc(100% - 20px);
+                bottom: -105%;
                 -webkit-filter: unset;
                 z-index: 1;
 }
@@ -101,6 +106,7 @@
         .content-description{
             margin-top: 20px;
             font-size: 1.3rem;
+            font-size: clamp(0.9rem, 1.4vw, 1.3rem);
         }
     }
 
@@ -150,6 +156,7 @@
     .description{
         margin-top: 30px;
         font-size: 1.3rem;
+        font-size: clamp(0.9rem, 2vw, 1.3rem); 
         text-align: center;
     }
 }
@@ -187,11 +194,13 @@
 
             h3{
                 font-size: 1.7rem;
+                font-size: clamp(1.3rem, 2vw, 1.7rem); 
             }
 
             .description{
                 margin-top: 20px;
                 font-size: 1.4rem;
+                font-size: clamp(1rem, 2vw, 1.4rem); 
             }
 
             .benefit-action{
@@ -260,6 +269,7 @@
 .best-seller{
     padding: getMeasurements("negativeSpace") getMeasurements("defaultPadding");
     position: relative;
+    padding-top: 0px;
 
     .title{
         font-size: getMeasurements("headerFontSize");
@@ -279,8 +289,8 @@
     
             button{
                 border: 2px solid getColors("primary");
-                width: 50px;
-                height: 50px;
+                width: 30px;
+                height: 30px;
                 background: transparent;
                 padding: 0px;
                 border-radius: 50%;
@@ -288,7 +298,10 @@
                 -moz-border-radius: 50%;
                 -ms-border-radius: 50%;
                 -o-border-radius: 50%;
-                font-size: 1.8rem;
+                font-size: 1.3rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 color: getColors("primary");
 
                 &:not(:first-child){
@@ -372,6 +385,7 @@
 .tips{
     
     padding: getMeasurements("negativeSpace") getMeasurements("defaultPadding");
+    padding-top: 0px;
 
     .title{
         font-size: getMeasurements("headerFontSize");
@@ -411,6 +425,126 @@
                 -moz-transition: 0.5s ease all;
                 -ms-transition: 0.5s ease all;
                 -o-transition: 0.5s ease all;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+
+    .banner-container{
+        justify-content: center !important;
+        min-height: unset;
+        max-height: unset;
+        height: auto;
+        
+        .banner-content{
+            width: 100%;
+            height: auto;
+            align-items: center;
+        }
+
+        .banner-image{
+            width: 100%;
+            align-items: center;
+            margin-top: 50px;
+            // border: 1px solid red;
+        }
+    }
+}
+
+@media only screen and (max-width: 684px){
+
+    .quality{
+
+        .quality-content{
+            width: 100%;
+            height: auto;
+
+            .title{
+                font-size: 1.8rem;
+            }
+            
+            .content-description{
+                font-size: 1.15rem;
+            }
+
+            &:not(:first-child){
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .why{
+
+        .description{
+            font-size: 1.3rem;
+        }
+    }
+
+    .benefits{
+
+        .benefit-contents{
+
+            .benefit-image{
+                width: 100%;
+                order: 2;
+                margin-top: 40px;
+            }
+
+            .benefit-text{
+              width: 100%;
+              order: 1;
+              text-align: center;
+
+              h3{
+                font-size: 1.7rem;
+              }
+
+              .description{
+                font-size: 1.4rem;
+              }
+            }
+        }
+    }
+
+    .discover{
+
+        .discover-content{
+
+            .discover-card{
+                width: 48%;
+                margin-bottom: 25px;
+            }
+        }
+
+    }
+
+    .tips{
+
+        .tips-images-container{
+
+            .tips-images{
+                width: 48%;
+                margin-bottom: 25px;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-width: 480px){
+
+    .quality{
+        text-align: center;
+    }
+
+    .best-seller{
+
+        .best-seller-card{
+
+            .best-seller-card-details{
+                width: 100%;
             }
         }
     }
