@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useRef } from "react";
+import Slider from "react-slick";
 
 import "../assets/styles/landingpage.css"
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import {FaAngleLeft, FaAngleRight, FaStar, FaStarHalf} from "react-icons/fa"
 
 
 import BannerImageOne from "../assets/images/banner_image_origin.png"
@@ -12,8 +17,60 @@ import DiscoverImageOne from "../assets/images/discover_image_one.png"
 import DiscoverImageTwo from "../assets/images/discover_image_two.png"
 import DiscoverImageThree from "../assets/images/discover_image_three.png"
 import DiscoverImageFour from "../assets/images/discover_image_four.png"
+import TipsImageOne from "../assets/images/skincare_tips_one.png"
+import TipsImageTwo from "../assets/images/skincare_tips_two.png"
+import TipsImageThree from "../assets/images/skincare_tip_three.png"
+import TipsImageFour from "../assets/images/skincare_tip_four.png"
+import BestSellerImageOne from "../assets/images/best_selling_item_one.png"
 import { Link } from 'react-router-dom'
+import { Button } from "antd";
 export default function LandingPage() {
+
+    var settings = {
+      dots: true,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 2,
+      initialSlide: 0,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    };
+
+    var slideRef = useRef("")
+
+    const nextSlide = () => {
+        slideRef.slickNext()
+    }
+
+    const prevSlide = () => {
+        slideRef.slickPrev()
+    }
+
   return (
     <>
     
@@ -199,6 +256,399 @@ export default function LandingPage() {
                 </div>
 
             </div>
+        </div>
+
+        <div className="best-seller">
+
+            <div className="best-seller-header">
+
+                <h2 className="title">Best Seller</h2>
+                
+                <div className="slide-next-prev-action-button">
+                    <Button className="slide-btn prevButton" onClick={prevSlide}><FaAngleLeft /></Button>
+                    <Button className="slide-btn nextButton" onClick={nextSlide}><FaAngleRight /></Button>
+                </div>
+
+            </div>
+            <Slider ref={c => (slideRef = c)} className="image-slider" {...settings}>
+                <div className="best-seller-card">
+
+                    <div className="best-seller-card-details">
+
+                        <div className="best-seller-card-image">
+
+                            <img src={BestSellerImageOne} alt="" />
+
+                        </div>
+
+                        <div className="best-seller-details">
+
+                            <h3>Hydro foaming cleanser</h3>
+
+                            <p className="price">&#8358;7,000</p>
+
+                            <div className="rating flex-container align-center">
+                                <div className="rating-stars flex-container align-center">
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStarHalf /></span>
+                                </div>
+                                <p>4.7(1243)</p>
+
+
+                            </div>
+
+                            <div className="best-seller-action">
+                                <Link to="" className="button">Order</Link>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div className="best-seller-card">
+
+                    <div className="best-seller-card-details">
+
+                        <div className="best-seller-card-image">
+
+                            <img src={BestSellerImageOne} alt="" />
+
+                        </div>
+
+                        <div className="best-seller-details">
+
+                            <h3>Hydro foaming cleanser</h3>
+
+                            <p className="price">&#8358;7,000</p>
+
+                            <div className="rating flex-container align-center">
+                                <div className="rating-stars flex-container align-center">
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStarHalf /></span>
+                                </div>
+                                <p>4.7(1243)</p>
+
+
+                            </div>
+
+                            <div className="best-seller-action">
+                                <Link to="" className="button">Order</Link>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div className="best-seller-card">
+
+                    <div className="best-seller-card-details">
+
+                        <div className="best-seller-card-image">
+
+                            <img src={BestSellerImageOne} alt="" />
+
+                        </div>
+
+                        <div className="best-seller-details">
+
+                            <h3>Hydro foaming cleanser</h3>
+
+                            <p className="price">&#8358;7,000</p>
+
+                            <div className="rating flex-container align-center">
+                                <div className="rating-stars flex-container align-center">
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStarHalf /></span>
+                                </div>
+                                <p>4.7(1243)</p>
+
+
+                            </div>
+
+                            <div className="best-seller-action">
+                                <Link to="" className="button">Order</Link>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div className="best-seller-card">
+
+                    <div className="best-seller-card-details">
+
+                        <div className="best-seller-card-image">
+
+                            <img src={BestSellerImageOne} alt="" />
+
+                        </div>
+
+                        <div className="best-seller-details">
+
+                            <h3>Hydro foaming cleanser</h3>
+
+                            <p className="price">&#8358;7,000</p>
+
+                            <div className="rating flex-container align-center">
+                                <div className="rating-stars flex-container align-center">
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStarHalf /></span>
+                                </div>
+                                <p>4.7(1243)</p>
+
+
+                            </div>
+
+                            <div className="best-seller-action">
+                                <Link to="" className="button">Order</Link>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div className="best-seller-card">
+
+                    <div className="best-seller-card-details">
+
+                        <div className="best-seller-card-image">
+
+                            <img src={BestSellerImageOne} alt="" />
+
+                        </div>
+
+                        <div className="best-seller-details">
+
+                            <h3>Hydro foaming cleanser</h3>
+
+                            <p className="price">&#8358;7,000</p>
+
+                            <div className="rating flex-container align-center">
+                                <div className="rating-stars flex-container align-center">
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStarHalf /></span>
+                                </div>
+                                <p>4.7(1243)</p>
+
+
+                            </div>
+
+                            <div className="best-seller-action">
+                                <Link to="" className="button">Order</Link>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div className="best-seller-card">
+
+                    <div className="best-seller-card-details">
+
+                        <div className="best-seller-card-image">
+
+                            <img src={BestSellerImageOne} alt="" />
+
+                        </div>
+
+                        <div className="best-seller-details">
+
+                            <h3>Hydro foaming cleanser</h3>
+
+                            <p className="price">&#8358;7,000</p>
+
+                            <div className="rating flex-container align-center">
+                                <div className="rating-stars flex-container align-center">
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStarHalf /></span>
+                                </div>
+                                <p>4.7(1243)</p>
+
+
+                            </div>
+
+                            <div className="best-seller-action">
+                                <Link to="" className="button">Order</Link>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div className="best-seller-card">
+
+                    <div className="best-seller-card-details">
+
+                        <div className="best-seller-card-image">
+
+                            <img src={BestSellerImageOne} alt="" />
+
+                        </div>
+
+                        <div className="best-seller-details">
+
+                            <h3>Hydro foaming cleanser</h3>
+
+                            <p className="price">&#8358;7,000</p>
+
+                            <div className="rating flex-container align-center">
+                                <div className="rating-stars flex-container align-center">
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStarHalf /></span>
+                                </div>
+                                <p>4.7(1243)</p>
+
+
+                            </div>
+
+                            <div className="best-seller-action">
+                                <Link to="" className="button">Order</Link>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div className="best-seller-card">
+
+                    <div className="best-seller-card-details">
+
+                        <div className="best-seller-card-image">
+
+                            <img src={BestSellerImageOne} alt="" />
+
+                        </div>
+
+                        <div className="best-seller-details">
+
+                            <h3>Hydro foaming cleanser</h3>
+
+                            <p className="price">&#8358;7,000</p>
+
+                            <div className="rating flex-container align-center">
+                                <div className="rating-stars flex-container align-center">
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStarHalf /></span>
+                                </div>
+                                <p>4.7(1243)</p>
+
+
+                            </div>
+
+                            <div className="best-seller-action">
+                                <Link to="" className="button">Order</Link>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div className="best-seller-card">
+
+                    <div className="best-seller-card-details">
+
+                        <div className="best-seller-card-image">
+
+                            <img src={BestSellerImageOne} alt="" />
+
+                        </div>
+
+                        <div className="best-seller-details">
+
+                            <h3>Hydro foaming cleanser</h3>
+
+                            <p className="price">&#8358;7,000</p>
+
+                            <div className="rating flex-container align-center">
+                                <div className="rating-stars flex-container align-center">
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStar /></span>
+                                    <span className="icon"><FaStarHalf /></span>
+                                </div>
+                                <p>4.7(1243)</p>
+
+
+                            </div>
+
+                            <div className="best-seller-action">
+                                <Link to="" className="button">Order</Link>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </Slider>
+
+        </div>
+
+        <div className="tips">
+            <h2 className="title">Want to receive best tips on perfumes?</h2>
+
+            <div className="tips-images-container flex-container align-start space-between">
+
+                <div className="tips-images">
+                    <img src={TipsImageOne} alt="tips" />
+                </div>
+
+                <div className="tips-images">
+                    <img src={TipsImageTwo} alt="tips" />
+                </div>
+
+                <div className="tips-images">
+                    <img src={TipsImageThree} alt="tips" />
+                </div>
+
+                <div className="tips-images">
+                    <img src={TipsImageFour} alt="tips" />
+                </div>
+
+
+            </div>
+            
         </div>
     
     </>
