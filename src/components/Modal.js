@@ -14,7 +14,7 @@ const Modal = ({children, isOpened, style, ...props}) => {
         display: "none",
         zIndex: 999,
         transition: "0.5s ease all",
-        opacity: 0b
+        opacity: 0
     })
 
     useEffect(()=>{
