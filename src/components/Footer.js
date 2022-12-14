@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FaFacebookSquare, FaInstagramSquare, FaPinterestSquare, FaTwitterSquare } from 'react-icons/fa';
+import { FaFacebookSquare, FaInstagramSquare, FaPinterestSquare, FaWhatsappSquare } from 'react-icons/fa';
+import { images } from '../assets/data/data';
 
 export default function Footer() {
+    
   return (
     <>
     
@@ -14,6 +16,8 @@ export default function Footer() {
                 <div className="content-one">
 
                     <div className='logo'>
+
+                        <img src={images.logo} alt="Peach Logo" />
                         <Link to="/">Peach</Link>
                     </div>
 
@@ -48,11 +52,11 @@ export default function Footer() {
                     <p className='description'>(+234) - 9036634645</p>
 
                     <ul className="social-container list-none flex-container">
-                        <li><a href="https://instagram.com/" target="_blank" rel="noreferrer"><FaInstagramSquare /></a></li>
+                          <li><a href="https://instagram.com/_peachcollections?igshid=YmMyMTA2M2Y=" target="_blank" rel="noreferrer"><FaInstagramSquare /></a></li>
 
                         <li><a href="https://facebook.com/" target="_blank" rel="noreferrer"><FaFacebookSquare /></a></li>
 
-                        <li><a href="https://twitter.com/" target="_blank" rel="noreferrer"><FaTwitterSquare /></a></li>
+                          <li><a href="https://wa.me/+2349022920650" target="_blank" rel="noreferrer"><FaWhatsappSquare /></a></li>
 
                         <li><a href="https://pinterest.com/" target="_blank" rel="noreferrer"><FaPinterestSquare /></a></li>
                     </ul>

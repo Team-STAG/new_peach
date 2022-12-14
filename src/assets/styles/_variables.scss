@@ -26,7 +26,8 @@
 $colors: (
     "bannerGradient": linear-gradient(180.37deg, #989895 6.32%, #868686 17.62%, #7B7B7B 25.73%, #7B7B7B 33.83%, #747474 39.2%, #747775 42.82%, #747775 46.38%, #747775 53.77%, #696B6A 67.25%, #696B6A 69.99%, #696B6A 73.72%, #989895 91.23%),
     "sectionColorOne": #989895,
-    "sectionColorTwo": #B6B6B6,
+    // "sectionColorTwo": #B6B6B6,
+    "sectionColorTwo": #f8efec,
     "sectionColorThree": #A9A9A9,
     "eclipse": #ADADAA,
     "textColorOne": black,
@@ -37,7 +38,7 @@ $colors: (
 
 
 $measurements: (
-    "headerHeight": 80px,
+    "headerHeight": 120px,
     "defaultPadding": 8%,
     "negativeSpace": 100px,
     "headerFontSize": clamp(1.2rem, 2vw, 1.8rem)

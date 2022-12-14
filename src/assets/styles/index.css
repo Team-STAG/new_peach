@@ -116,19 +116,21 @@ body {
   font-family: lora;
   width: 100%;
   position: relative;
+  background: #f8efec;
 }
 body .body-container {
   width: 100%;
   max-width: 1600px;
+  background: #f8efec;
   position: relative;
   margin-inline: auto;
   font-size: 1.2rem;
 }
 body .body-container header {
-  height: 80px;
+  height: 120px;
   width: 100%;
   position: fixed;
-  background: #868686;
+  background: transparent;
   top: 0px;
   left: 50%;
   transform: translateX(-50%);
@@ -139,11 +141,19 @@ body .body-container header {
   max-width: 1600px;
   padding: 10px 8%;
   z-index: 99;
+  transition: 0.5s ease all;
+  -webkit-transition: 0.5s ease all;
+  -moz-transition: 0.5s ease all;
+  -ms-transition: 0.5s ease all;
+  -o-transition: 0.5s ease all;
 }
 body .body-container header .logo a {
   font-family: pacifico;
   font-size: 1.5rem;
   color: #D56E46;
+}
+body .body-container header .logo img {
+  max-width: 35px;
 }
 body .body-container header .links ul {
   list-style: none;
@@ -204,11 +214,12 @@ body .body-container .page-container {
   min-height: 100vh;
 }
 body .body-container footer {
-  background: #A9A9A9;
+  background: black;
   padding: 80px 8%;
   width: 100%;
   height: auto;
   padding-bottom: 30px;
+  color: white;
 }
 body .body-container footer .footer-container .title {
   font-weight: bold;
@@ -217,7 +228,7 @@ body .body-container footer .footer-container .title {
   margin-bottom: 15px;
 }
 body .body-container footer .footer-container .footer-links li a {
-  color: black;
+  color: white;
 }
 body .body-container footer .footer-container .footer-links li:not(:last-child) {
   margin-bottom: 15px;
@@ -231,14 +242,21 @@ body .body-container footer .footer-container p:not(:last-child) {
 body .body-container footer .footer-container .content-one {
   width: 22%;
 }
+body .body-container footer .footer-container .content-one .logo {
+  display: flex;
+  align-items: center;
+}
 body .body-container footer .footer-container .content-one .logo a {
-  font-size: 3rem;
-  font-family: pacifico;
-  color: #D56E46;
+  font-size: 2rem;
+  color: white;
+  margin-left: 10px;
+}
+body .body-container footer .footer-container .content-one .logo img {
+  max-width: 60px;
 }
 body .body-container footer .footer-container .content-one .social-container li a {
   font-size: 2.5rem;
-  color: black;
+  color: white;
 }
 body .body-container footer .footer-container .content-one .social-container li:not(:last-child) {
   margin-right: 10px;

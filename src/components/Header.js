@@ -1,25 +1,46 @@
 import { Button } from 'antd'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { FaBars } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { images } from '../assets/data/data'
 import MobileMenu from './MobileMenu'
 import Modal from './Modal'
 
 export default function Header() {
 
     const [modalOpened, setModalOpened] = useState(false)
+    const headerRef = useRef();
 
     const closeModal = ()=> {
         setModalOpened(prev => !prev)
     }
 
+    useEffect(()=>{
+        window.addEventListener("scroll", ()=>{
+
+            if(window.scrollY > 100){
+
+                headerRef.current.style.background = " #f8efec";
+                headerRef.current.style.height = "60px";
+            }else{
+                headerRef.current.style.background = "transparent";
+                headerRef.current.style.height = "120px";
+
+            }
+
+
+        })
+    }, [])
+
   return (
     <>
     
-        <header className="flex-container space-between align-center">
+        <header ref={headerRef} className="flex-container space-between align-center">
             
             <div className='logo flex-container align-items'>
-                <Link to="/">Peach</Link>
+                <Link to="/">
+                    <img src={images.logo} alt="peach logo" />
+                </Link>
             </div>
 
             <div className='links desktop-links flex-container'>

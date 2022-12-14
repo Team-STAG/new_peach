@@ -5,11 +5,13 @@ body{
     font-family: lora;
     width: 100%;
     position: relative;
+    background:  #f8efec;
     
     .body-container{
         width: 100%;
         max-width: 1600px;
         // background: red;
+        background:  #f8efec;
         position: relative;
         margin-inline: auto;
         font-size: 1.2rem;
@@ -18,7 +20,8 @@ body{
             height: getMeasurements("headerHeight");
             width: 100%;
             position: fixed;
-            background: #868686;
+            //background: #868686;
+            background: transparent;
             top: 0px;
             left: 50%;
             transform: translateX(-50%);
@@ -29,13 +32,22 @@ body{
             max-width: 1600px;
             padding: 10px getMeasurements("defaultPadding");
             z-index: 99;
-    
+            transition: 0.5s ease all;
+            -webkit-transition: 0.5s ease all;
+            -moz-transition: 0.5s ease all;
+            -ms-transition: 0.5s ease all;
+            -o-transition: 0.5s ease all;
+
             .logo{
     
                 a{
                     font-family: pacifico;
                     font-size: 1.5rem;
                     color: getColors("primary");
+                }
+
+                img{
+                    max-width: 35px;
                 }
             }
 
@@ -124,11 +136,12 @@ body{
         }
 
         footer{
-            background: getColors("sectionColorThree");
+            background: black;
             padding: 80px getMeasurements("defaultPadding");
             width: 100%;
             height: auto;
             padding-bottom: 30px;
+            color: getColors("textColorTwo");
 
             .footer-container{
 
@@ -144,7 +157,7 @@ body{
                     li{
 
                         a{
-                            color: getColors("textColorOne");
+                            color: getColors("textColorTwo");
                         }
 
                         &:not(:last-child){
@@ -167,11 +180,18 @@ body{
                     // border: 1px solid red;
                     
                     .logo{
+                        display: flex;
+                        align-items: center;
+
                         
                         a{
-                            font-size: 3rem;
-                            font-family: pacifico;
-                            color: getColors("primary");
+                            font-size: 2rem;
+                            color: getColors("textColorTwo");
+                            margin-left: 10px;
+                        }
+
+                        img{
+                            max-width: 60px;
                         }
                     }
 
@@ -182,7 +202,7 @@ body{
                             
                             a{
                                 font-size: 2.5rem;
-                                color: getColors("textColorOne");
+                                color: getColors("textColorTwo");
                             }
 
                             &:not(:last-child){

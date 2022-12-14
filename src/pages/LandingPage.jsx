@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
+import { motion/* , useAnimation  */} from "framer-motion";
+// import { useInView } from "react-intersection-observer";
 
 import "../assets/styles/landingpage.css"
 
@@ -23,6 +25,7 @@ import TipsImageFour from "../assets/images/skincare_tip_four.png"
 import BestSellerImageOne from "../assets/images/best_selling_item_one.png"
 import { Link } from 'react-router-dom'
 import { Button } from "antd";
+import { products } from "../assets/data/data";
 export default function LandingPage() {
 
     var settings = {
@@ -78,7 +81,10 @@ export default function LandingPage() {
 
             <div className='banner-content flex-container column align-start half-width'>
 
-                <h1 className="banner-content-header first-header">Peach</h1>
+                <motion.h1 variants={{
+                    visible: {},
+                    hidden: {}
+                }} className="banner-content-header first-header">Peach</motion.h1>
 
                 <h1 className="banner-content-header second-header">Skincare Product</h1>
 
@@ -270,6 +276,99 @@ export default function LandingPage() {
 
             </div>
             <Slider ref={c => (slideRef = c)} className="image-slider" {...settings}>
+
+                {products.slice(0, 6).map((prod, index) => {
+                    var {image, name} = prod
+                    return(
+
+                        <div className="best-seller-card">
+
+                            <div className="best-seller-card-details">
+
+                                <div className="best-seller-card-image">
+
+                                    <img src={image} alt="" />
+
+                                </div>
+
+                                <div className="best-seller-details">
+
+                                    <h3>{name}</h3>
+
+                                    <p className="price">&#8358;7,000</p>
+
+                                    <div className="rating flex-container align-center">
+                                        <div className="rating-stars flex-container align-center">
+                                            <span className="icon"><FaStar /></span>
+                                            <span className="icon"><FaStar /></span>
+                                            <span className="icon"><FaStar /></span>
+                                            <span className="icon"><FaStar /></span>
+                                            <span className="icon"><FaStarHalf /></span>
+                                        </div>
+                                        <p>4.7(1243)</p>
+
+
+                                    </div>
+
+                                    <div className="best-seller-action">
+                                        <a href="tel:+2349022920650" className="button">Call to order</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    )
+                })
+                
+                }
+
+                  <div className="best-seller-card">
+
+                      <div className="best-seller-card-details">
+
+                          <div className="best-seller-card-image">
+
+                              <img src={BestSellerImageOne} alt="" />
+
+                          </div>
+
+                          <div className="best-seller-details">
+
+                              <h3>Hydro foaming cleanser</h3>
+
+                              <p className="price">&#8358;7,000</p>
+
+                              <div className="rating flex-container align-center">
+                                  <div className="rating-stars flex-container align-center">
+                                      <span className="icon"><FaStar /></span>
+                                      <span className="icon"><FaStar /></span>
+                                      <span className="icon"><FaStar /></span>
+                                      <span className="icon"><FaStar /></span>
+                                      <span className="icon"><FaStarHalf /></span>
+                                  </div>
+                                  <p>4.7(1243)</p>
+
+
+                              </div>
+
+                              <div className="best-seller-action">
+                                  <Link to="" className="button">Order</Link>
+                              </div>
+
+                          </div>
+
+                          <Link className="sell-overlay">
+
+                            <p>See More +</p>
+
+                          </Link>
+
+                      </div>
+
+                  </div>
+{/* 
                 <div className="best-seller-card">
 
                     <div className="best-seller-card-details">
@@ -580,46 +679,7 @@ export default function LandingPage() {
 
                     </div>
 
-                </div>
-
-                <div className="best-seller-card">
-
-                    <div className="best-seller-card-details">
-
-                        <div className="best-seller-card-image">
-
-                            <img src={BestSellerImageOne} alt="" />
-
-                        </div>
-
-                        <div className="best-seller-details">
-
-                            <h3>Hydro foaming cleanser</h3>
-
-                            <p className="price">&#8358;7,000</p>
-
-                            <div className="rating flex-container align-center">
-                                <div className="rating-stars flex-container align-center">
-                                    <span className="icon"><FaStar /></span>
-                                    <span className="icon"><FaStar /></span>
-                                    <span className="icon"><FaStar /></span>
-                                    <span className="icon"><FaStar /></span>
-                                    <span className="icon"><FaStarHalf /></span>
-                                </div>
-                                <p>4.7(1243)</p>
-
-
-                            </div>
-
-                            <div className="best-seller-action">
-                                <Link to="" className="button">Order</Link>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                </div> */}
             </Slider>
 
         </div>
@@ -651,7 +711,8 @@ export default function LandingPage() {
 
             <div className="tips-action flex-container align-center justify-center">
 
-                <a className="button" href="https://instagram.com/" rel="norefopener">Visit Instagram Page</a>
+                  {/* <a className="button" href="https://instagram.com/_peachcollections?igshid=YmMyMTA2M2Y= " rel="norefopener">Message us on whatsapp</a> */}
+                  <a className="button" href="https://wa.me/+2349022920650" rel="norefopener">Message us on whatsapp</a>
 
             </div>
             
