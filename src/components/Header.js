@@ -1,6 +1,6 @@
-import { Button } from 'antd'
+// import { Button } from 'antd'
 import React, { useEffect, useRef, useState } from 'react'
-import { FaBars, FaHome, FaPhone, FaPhoneAlt } from 'react-icons/fa'
+import { FaHome,  FaPhoneAlt } from 'react-icons/fa'
 import { BsHandbagFill } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import { images } from '../assets/data/data'
