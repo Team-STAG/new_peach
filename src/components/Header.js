@@ -1,6 +1,7 @@
 import { Button } from 'antd'
 import React, { useEffect, useRef, useState } from 'react'
-import { FaBars } from 'react-icons/fa'
+import { FaBars, FaHome, FaPhone, FaPhoneAlt } from 'react-icons/fa'
+import { BsHandbagFill } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import { images } from '../assets/data/data'
 import MobileMenu from './MobileMenu'
@@ -53,11 +54,17 @@ export default function Header() {
 
             </div>
 
-            <div className="mobile-link-btn">
+            <div className="mobile-link-btn align-center">
 
-                <Button onClick={()=>{
+                  <ul className='flex-container align-center'>
+                      <li><a href="#home"><FaHome /></a></li>
+                      <li><a href="#products"><BsHandbagFill /></a></li>
+                      <li><a href="#contact"><FaPhoneAlt /></a></li>
+                  </ul>
+
+                {/* <Button onClick={()=>{
                     closeModal()
-                }}><FaBars /></Button>
+                }}><FaBars /></Button> */}
 
             </div>
 

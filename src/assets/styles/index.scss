@@ -75,6 +75,21 @@ body{
             .mobile-link-btn{
                 display: none;
 
+                ul{
+                    list-style: none;
+
+                    li{
+                        &:not(:first-child){
+                            margin-left: 20px;
+                        }
+
+                        a{
+                            font-size: 1.5rem;
+                            color: getColors("textColorOne");
+                        }
+                    }
+                }
+
                 button{
                     background: transparent;
                     color: black;

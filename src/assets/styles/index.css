@@ -168,6 +168,16 @@ body .body-container header .links ul li:not(:first-child) {
 body .body-container header .mobile-link-btn {
   display: none;
 }
+body .body-container header .mobile-link-btn ul {
+  list-style: none;
+}
+body .body-container header .mobile-link-btn ul li:not(:first-child) {
+  margin-left: 20px;
+}
+body .body-container header .mobile-link-btn ul li a {
+  font-size: 1.5rem;
+  color: black;
+}
 body .body-container header .mobile-link-btn button {
   background: transparent;
   color: black;
