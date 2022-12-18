@@ -86,9 +86,9 @@ export default function LandingPage() {
                     hidden: {}
                 }} className="banner-content-header first-header">Peach</motion.h1>
 
-                <h1 className="banner-content-header second-header">Skincare Product</h1>
+                <h1 className="banner-content-header second-header">Collections</h1>
 
-                <p className="banner-content-subtitle">...nature's beauty solution</p>
+                <p className="banner-content-subtitle">Experience the best of all...</p>
 
                 <div className='banner-content-action'>
                     <a className='button' href="#products">View products</a>
