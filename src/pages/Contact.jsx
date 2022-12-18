@@ -4,7 +4,9 @@ const Contact = () => {
   return (
     <>
     
-        <div className="banner"></div>
+        <div className="banner">
+            
+        </div>
 
     </>
   )
