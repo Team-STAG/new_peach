@@ -11,6 +11,7 @@ import "./assets/styles/index.css";
 import Products from './pages/Products';
 
 import "antd/dist/antd.min.css"
+import Contact from './pages/Contact';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +32,12 @@ const router = createBrowserRouter([
       {
         path: "products",
         element: <Products />
+
+      },
+      
+      {
+        path: "contact",
+        element: <Contact />
 
       }
     ]

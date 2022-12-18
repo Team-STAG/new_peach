@@ -127,16 +127,18 @@ button {
 .banner-container .banner-content .banner-content-header.first-header {
   font-family: dancingScriptBold;
   font-size: clamp(5rem, 10vw, 10rem);
+  margin: 0px;
 }
 .banner-container .banner-content .banner-content-header.second-header {
   font-size: clamp(1.8rem, 5vw, 3rem);
+  margin: 0px;
 }
 .banner-container .banner-content .banner-content-subtitle {
   font-size: clamp(1rem, 5vw, 1.8rem);
-  margin-top: 20px;
+  margin-top: 0px;
 }
 .banner-container .banner-content .banner-content-action {
-  margin-top: 40px;
+  margin-top: 0px;
 }
 .banner-container .banner-content .banner-content-action a {
   background: #D56E46;
@@ -181,6 +183,7 @@ button {
   padding: 100px 8%;
   position: relative;
   overflow: hidden;
+  background: white;
 }
 .quality .quality-content {
   width: 32%;
@@ -290,6 +293,7 @@ button {
 
 .discover {
   padding: 100px 8%;
+  background: white;
 }
 .discover .title {
   font-size: clamp(1.2rem, 2vw, 1.8rem);
@@ -320,7 +324,6 @@ button {
 .best-seller {
   padding: 100px 8%;
   position: relative;
-  padding-top: 0px;
 }
 .best-seller .title {
   font-size: clamp(1.2rem, 2vw, 1.8rem);
@@ -443,7 +446,7 @@ button {
 
 .tips {
   padding: 100px 8%;
-  padding-top: 0px;
+  background: white;
 }
 .tips .title {
   font-size: clamp(1.2rem, 2vw, 1.8rem);
