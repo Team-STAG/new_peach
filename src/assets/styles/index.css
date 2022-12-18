@@ -229,16 +229,17 @@ body .body-container footer {
   width: 100%;
   height: auto;
   padding-bottom: 30px;
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
 }
 body .body-container footer .footer-container .title {
   font-weight: bold;
   font-size: 1.5rem;
   text-transform: uppercase;
   margin-bottom: 15px;
+  color: white;
 }
 body .body-container footer .footer-container .footer-links li a {
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
 }
 body .body-container footer .footer-container .footer-links li:not(:last-child) {
   margin-bottom: 15px;
@@ -258,7 +259,7 @@ body .body-container footer .footer-container .content-one .logo {
 }
 body .body-container footer .footer-container .content-one .logo a {
   font-size: 2rem;
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
   margin-left: 10px;
 }
 body .body-container footer .footer-container .content-one .logo img {
@@ -266,7 +267,7 @@ body .body-container footer .footer-container .content-one .logo img {
 }
 body .body-container footer .footer-container .content-one .social-container li a {
   font-size: 2.5rem;
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
 }
 body .body-container footer .footer-container .content-one .social-container li:not(:last-child) {
   margin-right: 10px;
@@ -279,6 +280,46 @@ body .body-container footer .footer-container .bold:not(:last-child) {
 }
 body .body-container footer .footer-container:not(:first-child) {
   margin-top: 40px;
+}
+body .body-container .contact-floating-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: green;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  padding: 10px;
+  z-index: 9999;
+  width: 40px;
+  overflow: hidden;
+  transition: 0.5s ease all;
+  -webkit-transition: 0.5s ease all;
+  -moz-transition: 0.5s ease all;
+  -ms-transition: 0.5s ease all;
+  -o-transition: 0.5s ease all;
+}
+body .body-container .contact-floating-button span {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+}
+body .body-container .contact-floating-button span.icon {
+  font-size: 1.5rem;
+}
+body .body-container .contact-floating-button span.text {
+  margin-left: 10px;
+  font-size: 1rem;
+  min-width: 150px;
+}
+body .body-container .contact-floating-button:hover {
+  width: 195px;
 }
 @media only screen and (max-width: 800px) {
   body .body-container footer .footer-container .content-one,

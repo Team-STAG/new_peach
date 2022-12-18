@@ -359,7 +359,7 @@ export default function LandingPage() {
 
                           </div>
 
-                          <Link className="sell-overlay">
+                          <Link to="/products" className="sell-overlay">
 
                             <p>See More +</p>
 

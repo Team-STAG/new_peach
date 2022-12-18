@@ -1,0 +1,168 @@
+@import "./variables";
+@import "./general";
+
+.banner{
+    height: 550px;
+    background: grey;
+}
+
+.products-container{
+    padding: getMeasurements("negativeSpace") getMeasurements("defaultPadding");
+    position: relative;
+
+    .title{
+        font-size: getMeasurements("headerFontSize");
+        text-transform: uppercase;
+        text-align: center;
+
+    }
+
+    .best-seller-header{
+        position: relative;
+
+        .slide-next-prev-action-button{
+            position: absolute;
+            display: inline-flex;
+            right: 0;
+            top: 0;
+    
+            button{
+                border: 2px solid getColors("primary");
+                width: 30px;
+                height: 30px;
+                background: transparent;
+                padding: 0px;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                font-size: 1.3rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: getColors("primary");
+
+                &:not(:first-child){
+                    margin-left: 15px;
+                }
+
+                &:hover{
+                    background: getColors("primary");
+                    color: getColors("textColorTwo");
+                    transition: 0.5s ease all;
+                    -webkit-transition: 0.5s ease all;
+                    -moz-transition: 0.5s ease all;
+                    -ms-transition: 0.5s ease all;
+                    -o-transition: 0.5s ease all;
+}
+            }
+    
+        }
+    }
+
+    .image-slider{
+        margin-top: 40px;
+    }
+
+    .best-seller-card{
+        margin-bottom: 20px;
+        // background: red;
+        
+        .best-seller-card-details{
+            width: 100%;
+            min-height: 100px;
+            position: relative;
+
+            .best-seller-card-image{
+                width: 100%;
+                height: 250px;
+                overflow: hidden;
+                background: white;
+                align-items: flex-end;
+
+                img{
+                    width: 100%;
+                }
+            }
+
+            .best-seller-details{
+
+                h3{
+                    margin-top: 20px;
+                    font-size: 1.3rem;
+                }
+
+                .price{
+                    margin-top: 10px;
+                }
+
+                .rating{
+                    margin-top: 10px;
+
+                    .rating-stars{
+                        color: orange;
+    
+                        span{
+    
+                            &:not(:first-child){
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+
+                .best-seller-action{
+                    margin-top: 10px;
+
+                    .button{
+                        background: getColors("primary");
+                        color: getColors("textColorTwo");
+                    }
+                }
+            }
+
+            .sell-overlay{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                background: white;
+                z-index: 9;
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                p{
+                    color: getColors("primary");
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+                &:hover{
+                    background: getColors("primary");
+                    transition: 0.5s ease all;
+                    -webkit-transition: 0.5s ease all;
+                    -moz-transition: 0.5s ease all;
+                    -ms-transition: 0.5s ease all;
+                    -o-transition: 0.5s ease all;
+
+                    p{
+                        color: white;
+                        transition: 0.5s ease all;
+                    }
+                }
+            }
+
+        }
+
+        
+    }
+
+    
+}

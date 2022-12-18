@@ -33,7 +33,7 @@ export default function Footer() {
                     </ul>
                 </div>
 
-                <div className='content-two'>
+                {/* <div className='content-two'>
                     <h3 className="title">About us</h3>
 
                     <ul className='list-none footer-links'>
@@ -42,7 +42,7 @@ export default function Footer() {
                         <li><a href="#best">Best seller</a></li>
                         <li><a href="#skincare">Skin Care Tips</a></li>
                     </ul>
-                </div>
+                </div> */}
 
                 <div className="content-one">
 

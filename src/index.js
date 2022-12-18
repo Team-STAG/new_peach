@@ -8,7 +8,9 @@ import {
 import LandingPage from "./pages/LandingPage";
 import Error404 from "./pages/Error404";
 import "./assets/styles/index.css";
+import Products from './pages/Products';
 
+import "antd/dist/antd.min.css"
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +26,12 @@ const router = createBrowserRouter([
         path: "home",
         element: <LandingPage />
     
+      },
+
+      {
+        path: "products",
+        element: <Products />
+
       }
     ]
   },
